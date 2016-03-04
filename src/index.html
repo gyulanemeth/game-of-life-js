@@ -7,8 +7,15 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div id="board"></div>
-	<button onclick="gol.next();">next</button>
+	<div id="gol" class="centered">
+		<div id="board"></div>
+		<div id="controls">
+			<button onclick="gol.next();">next</button>
+			<button id="playButton" onclick="gol.play();">play</button>
+			<button id="pauseButton" onclick="gol.pause();" disabled>pause</button>
+			<button onclick="gol.restart();">reset</button>
+		</div>
+	</div>
 	<!--
 	<div class="gol_board">
 		<div class="row">
