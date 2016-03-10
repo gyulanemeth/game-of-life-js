@@ -76,49 +76,6 @@ function createGameLogic(config) {
 	};
 }
 
-function createCellView(config) {
-	var parentElement = config.parentElement;
-	var addClass = config.addClass;
-
-	var cellDiv = document.createElement("div");
-	cellDiv.className = "cell"+addClass;
-
-	parentElement.appendChild(cellDiv);
-
-	var obj = {};
-
-	var alive = false;
-
-	function set(val) {
-		alive = val;
-
-		if (alive) {
-			cellDiv.className = "cell alive"+addClass;
-		} else {
-			cellDiv.className = "cell"+addClass;
-		}
-	}
-
-	function get() {
-		return alive;
-	}
-	
-	function div(){
-		return cellDiv;
-	}
-
-	Object.defineProperty(obj, "alive", {
-		set: set,
-		get: get
-	});
-	
-	Object.defineProperty(obj, "div", {
-		get: div
-	});
-
-	return obj;
-}
-
 function createGameController(config) {
 	var parentElement = config.parentElement;
 	var gameLogic = config.gameLogic;
