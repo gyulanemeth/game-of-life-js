@@ -1,21 +1,62 @@
 .gol_board .row {
-	height: 10px;
+	height: 26px;
+}
+.gol_board .row.medium{
+	height: 22px;
+}
+.gol_board .row.small{
+	height: 12px;
 }
 
 .gol_board .cell {
 	float: left;
 
-	width: 10px;
-	height: 10px;
+	width: 20px;
+	height: 20px;
 
 	padding: 0;
+	margin: 2px;
+	border: 1px solid #0A480A;
+	border-radius: 5px;
+	transition: .5s ease-in-out;
+	-webkit-transition: .5s ease-in-out;
+	-moz-transition: .5s ease-in-out;
+	-ms-transition: .5s ease-in-out;
+	-o-transition: .5s ease-in-out;
+}
+.gol_board .cell.medium{
 	margin: 0;
+}
+.gol_board .cell.small{
+	margin: 0;
+	height: 10px;
+	width: 10px;
+	border-radius: 2px;
 }
 
 .gol_board .cell:hover {
-	background: #eeddcc;
+	background: #ccbbaa;
+	opacity: 0.7;
 }
 
 .alive {
-	background: #aaaaaa;
+	/* background: #aaaaaa; */
+	background-color: #009900;
+}
+
+#controls{
+	padding: 10px;
+	margin: auto;
+	text-align: center;
+}
+#controls button{
+	margin: 5px;
+}
+
+.centered{
+	margin: auto;
+	left: 50%;
+	top: 50%;
+	position: absolute;
+	transform: translate(-50%,-50%);
 }
